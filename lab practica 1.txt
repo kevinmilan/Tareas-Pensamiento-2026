@@ -1,0 +1,26 @@
+#leer numero
+ingresarNumero= int(input("Porfavor, ingrese un número: "))
+
+if ingresarNumero >= 100 or ingresarNumero <= 999:
+
+    d1 = ingresarNumero // 100
+    d2 = (ingresarNumero // 10) % 10
+    d3 = ingresarNumero % 10
+
+     # d1 = 3
+     # d2 = 7
+      # d3 = 9
+
+
+    if d1 > d2:
+        d1, d2 = d2 , d1 # si d1 es mayor que d2, los intercambiamos, si no, no se intercambian
+    if d1 > d3:
+        d1, d3 = d3, d1 # si d1 es mayor que d3, se intercambian, si no, no se intercambian
+    if d2 > d3:
+        d2, d3 = d3, d2 # si d2 es mayor que d3 los intercambian, si no, no se intercambian
+
+    print("Ascendente: ", d1 , d2 , d3)
+    print("Descendente ", d3 , d2 , d1)
+
+else:
+    print("No es un numero de 3 digitos")
