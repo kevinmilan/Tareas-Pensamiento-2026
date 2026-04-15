@@ -1,0 +1,32 @@
+# primer ejercio
+# tam = int(input("Ingrese el tamaño del arreglo: "))
+# base = int(input("Ingrese el número base: "))
+
+# arreglo = []
+# for i in range(1, tam + 1):
+  #  arreglo.append(base * i)
+    
+# print(arreglo)
+
+
+#segundo ejercicio
+
+tam = int(input("Ingrese el tamaño: "))
+nombres = []
+longitud = []
+
+for i in range(tam):
+    nombre = input("Ingrese un nombre: ")
+    nombres.append(nombre)
+    longitud.append(len(nombre))
+    
+print("Nombres: ", nombres)
+print("Longitudes: ", longitud)
+
+
+# tercer ejercicio
+n = int(input("Cantidad de c lientes: "))
+notas = []
+for i in range(n):
+    x = int(input("Nota: "))
+    notas.append(x) no logré terminar
