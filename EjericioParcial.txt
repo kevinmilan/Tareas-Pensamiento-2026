@@ -1,0 +1,47 @@
+def pares_impare(lista):
+    pares = 0
+    impares = 0
+    for i in lista:
+        if i % 2 == 0:
+            pares= pares + 1
+        else:
+            impares = impares +1
+    print(f"hay {pares}, y {impares} impares")
+    
+    
+def positivo_negativo(lista):
+    negativos = 0
+    positivos = 0
+    ceros = 0
+    for i in lista:
+        if i > 0:
+            positivos = positivos + 1
+        elif i < 0:
+            negativos = negativos + 1
+        else: 
+            ceros = 0 + 1
+    print(f"hay {positivos} positivos, tambien hay {negativos} negativos, y {ceros} ceros")
+    
+
+def mayor_menor(lista):
+    mayor = 0
+    menor = 0
+    for i in lista:
+        if i < menor:
+            i = menor
+        else: i > mayor
+        i = mayor
+    print(F"LOS MAYORES SON {mayor}, menores son {menor}")
+    
+    
+        
+        
+n=int(input("Ingrese tamaño de la lista: "))
+lista = []
+
+for i in range(n):
+    datos = int(input("Ingrese datos: "))
+    lista.append(datos)
+pares_impare(lista)
+positivo_negativo(lista)
+mayor_menor(lista)
