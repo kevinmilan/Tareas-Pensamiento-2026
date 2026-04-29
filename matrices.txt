@@ -1,0 +1,72 @@
+tabla = [
+    [1, 2, 3],
+    [4,5,6],
+    [7,8,9]
+    
+]
+
+
+for i in tabla:
+    for j in i: 
+        if j >= 6:
+            break
+        else:
+            print(j)
+        
+        
+matriz = []
+size_row = int(input("Ingrese tamaño de fila: "))
+size_column=int(input("Ingrese tamaño de columna: "))
+for f in range(size_row):
+    fila = []
+    for c in range(size_row):
+        dato = int(input("Ingrese datos: "))
+        fila.append(dato)
+    matriz.append(fila)
+    print(matriz)
+        
+        
+        
+a = [ [2,3],
+     [4,5]]
+
+b = [ [5,4],
+     [6,8]]
+suma = [[0,0],[0,0]]
+
+for i in range(len(a)):
+    for j in range(len(a[0])):
+        suma[i][j]=a[i][j]+b[i][j]
+print(suma)
+
+
+#matrices
+a = []
+b = []
+
+f = int(input("Ingrese tamaño fila: "))
+c = int(input("Ingrese tamaño columna: "))
+
+print("Matriz A")
+for i in range(f):
+    fila = []
+    for j in range(c):
+        fila.append(int(input("Dato: ")))
+    a.append(fila)
+    
+print("Matriz B")
+for i in range(f):
+    fila = []
+    for j in range(c):
+        fila.append(int(input("Dato: ")))
+    b.append(fila)
+
+resultado = []
+
+for i in range(f):
+    fila = []
+    for j in range(c):
+        fila.append(a[i][j]- b[i][j])
+    resultado.append(fila)
+    
+print(resultado)
