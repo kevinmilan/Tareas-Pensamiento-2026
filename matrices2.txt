@@ -1,0 +1,44 @@
+matriz = [] # guardamos los numeros
+suma_filas = [0,0,0] # guarda la suma de cada fila
+suma_columnas = [0,0,0] # guarda la suma de cada columna
+
+
+for i in range(3): # for por las filas, son 3
+    fila = [] # creamos una lista para guardar cada fila
+    for j in range(3): # este for es para las columnas, son 3 tambien columnas
+        num = int(input("Ingrese número [{i}][{j}]: ")) # pedimos al usuario cada numero
+        fila.append(num) # guardamos el numero en la fila
+        suma_filas[i] += num # se suma ese numero en su fila, en suma_filas[0]
+        suma_columnas[j] += num # se suma tambien ese numero a su columna, en suma_columnas
+    matriz.append(fila)
+print("Suma de filas: ", suma_filas)
+print("Suma columnas: ", suma_columnas)
+
+
+matriz = []
+
+for i in range(3):
+    fila = []
+    for j in range(3):
+        fila.append(int(input()))
+    matriz.append(fila)
+
+#sumamos
+f1 = sum(matriz[0])
+f2 = sum(matriz(1))
+f3 = sum(matriz(2))
+
+c1 = matriz[0][0] + matriz[1][0] + matriz[2][0]
+c2 = matriz[0][1] + matriz[1][1] + matriz[2][1]
+c3 = matriz[0][2] + matriz[1][2] + matriz[2][2]
+
+d1 = matriz[0][0] + matriz[1][1] + matriz[2][2]
+d2 = matriz[0][2] + matriz[1][1] + matriz[2][0]
+
+#verificamos
+if(f1==15 and f2==15 and f3==15 and
+   c1==15 and c2== 5 and c3==15 and
+   d1==15 and d2==15):
+    print("Si es cuadrado magico")
+else:
+    print("No es cuadrado magico")
