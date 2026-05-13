@@ -1,0 +1,82 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# Datos
+dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
+
+niveles_azucar = [130, 160, 95, 175, 160]
+niveles_sal = [2000, 2400, 1800, 2400, 2700]
+presion_sistolica = [115, 130, 110, 125, 175]
+presion_diastolica = [75, 85, 70, 78, 95]
+
+# Función
+def evaluar():
+    
+    resultado = ""
+
+    for i in range(len(dias)):
+
+        resultado += f"\nDía: {dias[i]}\n"
+
+        azucar = niveles_azucar[i]
+        sal = niveles_sal[i]
+        sistolica = presion_sistolica[i]
+        diastolica = presion_diastolica[i]
+
+        resultado += f"Azúcar: {azucar} mg/dL\n"
+        resultado += f"Sal: {sal} mg\n"
+        resultado += f"Presión: {sistolica}/{diastolica} mmHg\n"
+
+        # Azúcar
+        if 70 <= azucar <= 140:
+            resultado += "Azúcar normal\n"
+        else:
+            resultado += "ALERTA: Azúcar alta\n"
+
+        # Sal
+        if sal <= 2300:
+            resultado += "Sal normal\n"
+        else:
+            resultado += "ALERTA: Mucha sal\n"
+
+        # Presión
+        if sistolica < 120 and diastolica < 80:
+            resultado += "Presión Normal\n"
+
+        elif 120 <= sistolica <= 129 and diastolica < 80:
+            resultado += "Presión Elevada\n"
+
+        elif (130 <= sistolica <= 139) or (80 <= diastolica <= 89):
+            resultado += "Hipertensión Etapa 1\n"
+
+        elif sistolica >= 140 or diastolica >= 90:
+            resultado += "Hipertensión Etapa 2\n"
+
+        resultado += "-------------------------\n"
+
+    caja_texto.delete("1.0", tk.END)
+    caja_texto.insert(tk.END, resultado)
+
+# Ventana
+ventana = tk.Tk()
+ventana.title("Control de Salud")
+ventana.geometry("600x500")
+
+# Título
+titulo = tk.Label(ventana, text="Sistema de Monitoreo de Salud",
+                  font=("Arial", 16))
+titulo.pack(pady=10)
+
+# Botón
+boton = tk.Button(ventana, text="Evaluar Semana",
+                  command=evaluar,
+                  bg="lightblue",
+                  font=("Arial", 12))
+boton.pack(pady=10)
+
+# Área de texto
+caja_texto = tk.Text(ventana, width=70, height=20)
+caja_texto.pack()
+
+# Ejecutar
+ventana.mainloop()
