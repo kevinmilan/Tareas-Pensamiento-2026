@@ -1,0 +1,55 @@
+# Tuplas:
+# Una tupla es una colección ordenada e inmutable de datos.
+# Se utiliza para almacenar varios valores en una sola variable cuando
+#  no se desea que esos datos cambien durante la ejecución del programa.
+# Las tuplas pueden contener diferentes tipos de datos y permiten acceder
+# a sus elementos mediante índices. Se definen usando paréntesis ().
+
+# Diccionarios:
+# Un diccionario es una estructura de datos que almacena información
+# en pares clave:valor. Cada clave es única.
+# Los diccionarios son mutables, por lo que se pueden agregar,
+# modificar o eliminar elementos fácilmente. Se definen usando llaves {}.
+
+
+# ejemplo de tuplas
+
+# Crear una tupla
+tupla = ("Juan", 25, "Guatemala")
+
+# Las tupla no se pueden modificar directamente
+print("Tupla original:", tupla)
+
+# Para agregar o modificar datos, se crea una nueva tupla
+tupla = tupla + ("Programador",)   #insertar datos
+print("Tupla con nuevo dato:", tupla)
+
+
+# ekemplo de diccionario
+
+# Crear un diccionario
+persona = {
+    "nombre": "Juan",
+    "edad": 25,
+    "pais": "Guatemala"
+}
+
+print("Diccionario original:", persona)
+
+# insertar datos
+
+persona["profesion"] = "Programador"
+
+print("Después de insertar:", persona)
+
+# modificar datos
+
+persona["edad"] = 26
+
+print("Después de modificar:", persona)
+
+
+# eliminar datos
+del persona["pais"]
+
+print("Después de eliminar:", persona)
